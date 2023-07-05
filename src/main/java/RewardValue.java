@@ -1,12 +1,12 @@
 public class RewardValue {
     private double cashValue;
-    private double milesValue;
+    private int milesValue;
     private static final double CONVERSION_RATE = 0.0035;
 
     // Constructor that accepts a cash value
     public RewardValue(double cashValue) {
         this.cashValue = cashValue;
-        this.milesValue = cashValue / CONVERSION_RATE;
+        this.milesValue = (int)(cashValue / CONVERSION_RATE);
     }
 
     // Constructor that accepts a value in miles
@@ -21,7 +21,7 @@ public class RewardValue {
     }
 
     // Method that returns how many miles the RewardValue is worth
-    public double getMilesValue() {
+    public int getMilesValue() {
         return milesValue;
     }
 }
